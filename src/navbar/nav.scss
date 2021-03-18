@@ -1,0 +1,154 @@
+header {
+    height: 80px;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    background-color: rgb(230, 209, 209);
+    transition: all 400ms ease-out;
+  
+    .inner-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      height: 80px;
+      max-width: 1280px;
+      color: rgb(10, 10, 10);
+      margin: 0 auto;
+  
+      .logo {
+        a {
+          font-weight: bolder;
+          text-decoration: none;
+          letter-spacing: 1.5px;
+          margin-left: 3px;
+          transition: all 200ms ease-out;
+          font-size: 2rem;
+  
+          &:link {
+            color: rgb(10, 10, 10);
+          }
+  
+          &:visited {
+            color: rgb(10, 10, 10);
+          }
+  
+          &:focus {
+            color: rgb(10, 10, 10);
+          }
+  
+          &:hover {
+            color: rgb(155, 120, 117);
+          }
+  
+          &:active {
+            color: rgb(10, 10, 10);
+          }
+        }
+      }
+  
+      .navigation {
+        nav {
+          display: flex;
+          flex-direction: row;
+  
+          a {
+            font-size: 1.6rem;
+            margin: 0 20px;
+            text-decoration: none;
+            letter-spacing: 1.75px;
+            text-transform: uppercase;
+            transition: all 200ms ease-out;
+  
+            &:last-child {
+              margin-right: 0;
+            }
+  
+            &:link {
+              color: rgb(10, 10, 10);
+            }
+  
+            &:visited {
+              color: rgb(10, 10, 10);
+            }
+  
+            &:focus {
+              color: rgb(10, 10, 10);
+            }
+  
+            &:hover {
+              color: rgb(155, 120, 117);
+            }
+  
+            &:active {
+              color: rgb(10, 10, 10);
+            }
+          }
+  
+          // Dark mode toggle button
+          .dark-button {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -3px;
+  
+            &:before,
+            &:after {
+              box-sizing: border-box;
+            }
+  
+            label {
+              position: relative;
+              display: block;
+              width: 45px;
+              height: 25px;
+              border-radius: 100px;
+              background-color: rgb(37, 37, 37);
+              overflow: hidden;
+              cursor: pointer;
+  
+              &:before,
+              &:after {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 19px;
+                height: 19px;
+                border-radius: 50%;
+                top: 3px;
+                left: 3px;
+                transition: 0.4s ease;
+              }
+  
+              &:before {
+                background-color: rgb(241, 110, 101);
+              }
+  
+              &:after {
+                background-color: rgb(37, 37, 37);
+                left: -58px;
+                transform: scale(0.00001);
+              }
+            }
+  
+            input[type="checkbox"] {
+              display: none;
+  
+              &:checked + label {
+                &:before {
+                  background-color: rgb(1, 219, 198);
+                  transform: translateX(20px);
+                }
+  
+                &:after {
+                  transform: translateX(75px) scale(1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

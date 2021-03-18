@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/todoapp
 # production
 /build
 
